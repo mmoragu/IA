@@ -5,15 +5,12 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 
 from readFile import *
-from plotData import *
-from gradientDescent import *
-from computeCost import *
-from ComputeCostVectorized import *
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
     ## ======================= EJ1. Cargar y visualizar =======================
-    X, y = read_file('./Material_Alumnos/ex1data1.txt')
+    X, y = read_file('./ex1data1.txt')
     
     regression = LinearRegression()
     regression.fit(X, y)

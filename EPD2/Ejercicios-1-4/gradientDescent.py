@@ -2,7 +2,6 @@ import computeCost
 import numpy as np
 
 
-# Create a function to gradient descent
 def gradientDescent(X, y, theta, iterations=1500, learning_rate=0.01):
     m = len(X)  # Number of training examples
 
@@ -12,7 +11,10 @@ def gradientDescent(X, y, theta, iterations=1500, learning_rate=0.01):
 
         # Calculate the error
         error = y_pred - y
+
+        loss=np.dot(X.T, error) 
+        gradient=(learning_rate  * loss)/ m
         # Update theta using gradient descent
-        theta = theta - (learning_rate / m) * np.dot(X.T, error)
+        theta = theta - gradient
 
     return theta

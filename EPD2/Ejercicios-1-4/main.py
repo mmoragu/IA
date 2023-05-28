@@ -24,7 +24,6 @@ if __name__ == '__main__':
 
     # plotData(X,y)
     ## ======================= EJ2. Función de coste =======================
-    print(X.shape, y.shape, theta.shape)
     
     J_base = computeCost(X, y , theta)
     cost_vectorized=computeCost_Vectorized(X,y,theta)
@@ -35,11 +34,11 @@ if __name__ == '__main__':
 
 
     # Predict values for population sizes of 35, 000 and 70, 000
-    x_35= np.array([0,35000/10000])
+    x_35= np.array([[0,35000/10000]])
     x_70= np.array([0,70000/10000])
 
-    prediction_35= np.dot(x_35,theta)[0]
-    prediction_70= np.dot(x_70,theta)[0]
+    prediction_35= (np.dot(x_35,theta)[0] )*10000
+    prediction_70=( np.dot(x_70,theta)[0])*10000
 
 
     print("Fin")
