@@ -13,7 +13,7 @@ from prepareData import *
 if __name__ == '__main__':
 
     ## ======================= EJ1. Cargar y visualizar =======================
-    X, y = read_file('./Material_Alumnos/ex1data1.txt')
+    X, y = read_file('./ex1data1.txt')
     
 
     X, y , theta = prepareData(X,y)
