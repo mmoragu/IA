@@ -8,23 +8,19 @@ from plotData import *
 from gradientDescent import *
 from computeCost import *
 from ComputeCostVectorized import *
+from prepareData import *
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
     ## ======================= EJ1. Cargar y visualizar =======================
     X, y = read_file('./Material_Alumnos/ex1data1.txt')
-    X= X.to_numpy()
+    
 
-    zero_colum=np.zeros((X.shape[0],X.shape[1]))
-    X= np.append(zero_colum,X,axis=1)
-    y=y.to_numpy()
-
-    #build Theta 
-    theta=np.zeros((X.shape[1],1))
+    X, y , theta = prepareData(X,y)
 
     # plotData(X,y)
-    ## ======================= EJ2. Función de coste =======================
-    
+
+
     J_base = computeCost(X, y , theta)
     cost_vectorized=computeCost_Vectorized(X,y,theta)
 
