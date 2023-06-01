@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     cost= computeCost_Vectorized(X,y,theta)
 
-    theta = gradientDescent_Vectorized(X,y,theta)
+    theta,cost_history = gradientDescent_Vectorized(X,y,theta)
     
     theta_normalEquations=normalEquations(X_prima,y)
 
