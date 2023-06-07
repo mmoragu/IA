@@ -10,7 +10,7 @@ from readFile import *
 if __name__ == '__main__':
 
     ## ======================= EJ1. Cargar y visualizar =======================
-    X, y = read_file('./ex1data1.txt')
+    X, y = read_file('./Ejercicios-1-4/ex1data1.txt')
     
     regression = LinearRegression()
     regression.fit(X, y)
