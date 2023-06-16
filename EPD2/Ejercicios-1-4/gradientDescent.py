@@ -1,4 +1,3 @@
-import computeCost
 import numpy as np
 
 
