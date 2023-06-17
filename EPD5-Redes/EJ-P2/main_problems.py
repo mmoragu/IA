@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     # Load Training Data
     print("Loading Data ...\n")
-    data = sio.loadmat("ex4data1.mat")
+    data = sio.loadmat("./Ejercicios/ex4data1.mat")
 
     X = data['X']
     y = data['y']
@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     # Load the weights into variables Theta1 and Theta2
     print("Loading Saved Neural Network Parameters ...\n")
-    weights = sio.loadmat("ex4weights.mat")
+    weights = sio.loadmat("./Ejercicios/ex4weights.mat")
     theta1 = weights['Theta1']
     theta2 = weights['Theta2']
     nn_params_ini = np.hstack((theta1.ravel(order='F'), theta2.ravel(order='F'))) # Unroll parameters
